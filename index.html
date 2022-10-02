@@ -1,38 +1,52 @@
 <head>
-    <title>TOBooList</title>
+    <title>Toboolist</title>
     <link rel="icon" href="./img/logo.png">
 </head>
 <style>
+    body
+        {
+            margin:0;
+        }
     header.header_class 
         {
             height:53px;
             background-color:#FFF;
-            background-image:url('./img/logo.png');
-            background-repeat: no-repeat;                       
+            background-image: url('./img/logo.png');
+            background-repeat: no-repeat;
+            background-position-x: 20px;
+            background-position-y: 10px;
+            padding-left:20px;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-right:20px;
         }
     h1.header_class
         {
             font-weight: bolder;
-            font-size: 31px;
-            padding-top:8px;
+            font-size: 36px;
+            vertical-align:middle;
+            display: inline-block;            
             padding-left:52px;
             margin:5px;
         }
     div.full_page
         {
-            background-color: #DDD;
-            clear: both;
+            background-color: #EEE;            
+            height:100%;
+            width:100%;
+            position: absolute;
         }
     div.bar
         {            
-            margin-top:40px;
+            margin-top:60px;
+            margin-bottom:2px;
             padding:10px;            
             background-color: white;
             border-radius: 4px;
             margin-left:auto;
             margin-right:auto;
             clear: both;
-            width:800px;
+            width:800px;            
         }
     div.list
         {
