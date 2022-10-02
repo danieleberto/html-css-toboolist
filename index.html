@@ -84,6 +84,79 @@
             border: 1px solid #CCC;
             color: #CCC;            
         }
+    ul.first_level
+        {
+            list-style-type:symbols()
+        }
+    ul.first_level 
+        {
+        margin: 0.75em 0;
+        padding: 0 1em;
+        list-style: none;
+        }
+    ul.first_level li::before 
+        { 
+        content: "";        
+        color: white;
+        width: 0px;
+        height: 0px;
+        border: 6px solid #111;
+        border-top-color: transparent #111;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        position: relative;
+        top:16px;
+        left:-2px;        
+        }    
+    ul.first_level li
+        {
+        font-size: 20px;
+        color: #111;
+        font-weight: bold;
+        }
+    ul.second_level
+        {            
+        list-style: none;  
+        }
+    ul.second_level li
+        {
+        line-height: 35px;
+        font-size: 16px;
+        font-weight: 100;
+        color:#111;
+        
+        }
+
+    ul.second_level li.ok::before
+        {
+        content: "\2713";
+        color: #70c5b1;
+        width:10px;
+        height:10px;
+        border-radius:100%;
+        border:1px solid #70c5b1;        
+        position: relative;
+        top:-1px;;
+        left:-3px;
+        padding:4px;
+        font-size: 10px;     
+        }
+    ul.second_level li.bad::before
+        {
+        content: "\2717";
+        color:#eb5952;
+        width:10px;
+        height:10px;
+        border-radius:100%;
+        border:1px solid #eb5952;        
+        position: relative;
+        top:-1px;
+        left:-3px;
+        padding:4px;
+        font-size: 10px;     
+        }
+
 </style>
 <body>
     <header class="header_class">
@@ -98,7 +171,32 @@
         </div>
         <div class="list">
             <div class="column">
-                prova list
+                <ul class="first_level">
+                    <li>
+                        New task
+                        <ul class="second_level">                            
+                            <li class="ok">Quartely Newsletter</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Today
+                        <ul class="second_level">                            
+                            <li class="ok">Recluit blog post</li>
+                            <li class="ok">Mobile app lanch</li>
+                            <li class="bad">Interview John H.</li>
+                            <li class="ok">Summit update to mobile storefront</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Upcoming
+                        <ul class="second_level">
+                            <li class="bad">Schedule meeting with Alex</li>                            
+                            <li class="ok">Homepage refresh</li>
+                            <li class="ok">Onboard new sale team members</li>                            
+                            <li class="ok">Review editor calendar</li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
