@@ -58,6 +58,32 @@
             margin-left:auto;
             margin-right:auto;
         }
+    div.column
+        {
+            margin-left:50px;
+            margin-top:10px;
+        }
+    button.task
+        {
+            background-color: #47adf1;
+            border-radius: 4px;
+            text-align: center;
+            display: inline-block;
+            border:0;
+            color:#FFF;
+            font-size: 12px;
+            font-weight: bold;
+            padding-top:5px;
+            padding-bottom:5px;
+            padding-left:10px;
+            padding-right:10px;
+        }
+    button.section
+        {
+            background-color: #FFF;            
+            border: 1px solid #CCC;
+            color: #CCC;            
+        }
 </style>
 <body>
     <header class="header_class">
@@ -65,10 +91,15 @@
     </header>
     <div class="full_page">
         <div class="bar">
-            prova bar
+            <div class="column">
+                <button type="button" class="Task">Add Task</button>
+                <button type="button" class="Task section">Add Section</button>
+            </div>            
         </div>
         <div class="list">
-            prova list
+            <div class="column">
+                prova list
+            </div>
         </div>
     </div>
 </body>
