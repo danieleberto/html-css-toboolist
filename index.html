@@ -87,73 +87,99 @@
 
     ul.first_level 
         {
-        margin: 0.75em 0;
-        padding: 0 1em;
-        list-style: none;
+            margin: 0.75em 0;
+            padding: 0 1em;
+            list-style: none;
         }
     ul.first_level li::before 
         { 
-        content: "";        
-        color: white;
-        width: 0px;
-        height: 0px;
-        border: 6px solid #111;
-        border-top-color: transparent #111;
-        border-right-color: transparent;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-        position: relative;
-        top:16px;
-        left:-2px;        
+            content: "";        
+            color: white;
+            width: 0px;
+            height: 0px;
+            border: 6px solid #111;
+            border-top-color: transparent #111;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            position: relative;
+            top:16px;
+            left:-2px;        
         }    
     ul.first_level li
         {
-        font-size: 20px;
-        color: #111;
-        font-weight: bold;
+            font-size: 20px;
+            color: #111;
+            font-weight: bold;
         }
     ul.second_level
         {            
-        list-style: none;  
+            list-style: none;  
         }
     ul.second_level li
         {
-        line-height: 35px;
-        font-size: 16px;
-        font-weight: 100;
-        color:#111;
-        
+            line-height: 35px;
+            font-size: 16px;
+            font-weight: normal;
+            color:#111;        
         }
 
     ul.second_level li.ok::before
         {
-        content: "\2713";
-        color: #70c5b1;
-        width:10px;
-        height:10px;
-        border-radius:100%;
-        border:1px solid #70c5b1;        
-        position: relative;
-        top:-1px;;
-        left:-3px;
-        padding:4px;
-        font-size: 10px;     
+            content: "\2713";
+            color: #70c5b1;
+            width:10px;
+            height:10px;
+            border-radius:100%;
+            border:1px solid #70c5b1;        
+            position: relative;
+            top:-1px;;
+            left:-3px;
+            padding:4px;
+            font-size: 10px;     
+            font-weight: bold;
         }
     ul.second_level li.bad::before
         {
-        content: "\2717";
-        color:#eb5952;
-        width:10px;
-        height:10px;
-        border-radius:100%;
-        border:1px solid #eb5952;        
-        position: relative;
-        top:-1px;
-        left:-3px;
-        padding:4px;
-        font-size: 10px;     
+            content: "\2717";
+            color:#eb5952;
+            width:10px;
+            height:10px;
+            border-radius:100%;
+            border:1px solid #eb5952;        
+            position: relative;
+            top:-1px;
+            left:-3px;
+            padding:4px;
+            font-size: 10px;  
+            font-weight: bold;   
+        }
+    button.element 
+        {            
+            border-radius: 10px;
+            text-align: center;
+            display: inline-block;
+            border:0;
+            color:#FFF;
+            font-size: 10px;
+            font-weight: bold;
+            padding-top:5px;
+            padding-bottom:5px;
+            padding-left:10px;
+            padding-right:10px;            
         }
 
+    button.editorial { background-color: #47adf1; }
+
+    button#goals { background-color: #9e74e1; }
+
+    button#recluting { background-color: #64c0a9; }
+
+    button#mobile { background-color : #f19e34; }
+
+    button#website { background-color:#d863a1; }
+
+    button#sales { background-color:#b2cb2c; }
 </style>
 <body>
     <header class="header_class">
@@ -172,25 +198,49 @@
                     <li>
                         New task
                         <ul class="second_level">                            
-                            <li class="ok">Quartely Newsletter</li>
+                            <li class="ok">
+                                Quartely Newsletter
+                                <button type="button" class="element editorial">Editorial</button>
+                            </li>
                         </ul>
                     </li>
                     <li>
                         Today
                         <ul class="second_level">                            
-                            <li class="ok">Recluit blog post</li>
-                            <li class="ok">Mobile app lanch</li>
-                            <li class="bad">Interview John H.</li>
-                            <li class="ok">Summit update to mobile storefront</li>
+                            <li class="ok">
+                                Recluit blog post
+                                <button type="button" class="element editorial">Editorial</button>
+                            </li>
+                            <li class="ok">
+                                Mobile app lanch
+                                <button type="button" class="element" id="goals">Q1 Goals</button>
+                            </li>
+                            <li class="bad">
+                                Interview John H.
+                                <button type="button" class="element" id="recluting">Recluting</button>
+                            </li>
+                            <li class="ok">
+                                Summit update to mobile storefront
+                                <button type="button" class="element" id="mobile">Mobile</button>
+                            </li>
                         </ul>
                     </li>
                     <li>
                         Upcoming
                         <ul class="second_level">
                             <li class="bad">Schedule meeting with Alex</li>                            
-                            <li class="ok">Homepage refresh</li>
-                            <li class="ok">Onboard new sale team members</li>                            
-                            <li class="ok">Review editor calendar</li>
+                            <li class="ok">
+                                Homepage refresh
+                                <button type="button" class="element" id="website">Website</button>
+                            </li>
+                            <li class="ok">
+                                Onboard new sale team members
+                                <button type="button" class="element" id="sales">Sales</button>
+                            </li>
+                            <li class="ok">
+                                Review editor calendar
+                                <button type="button" class="element editorial">Editorial</button>
+                            </li>
                         </ul>
                     </li>
                 </ul>
